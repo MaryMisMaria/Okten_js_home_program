@@ -38,7 +38,7 @@
    //let test=false;
    if(test!==true){
        console.log('Вірно');
-   }else if (test==false) {
+   }else if (test===false) {
        console.log('Неправильно');
    }
    //false
@@ -56,21 +56,21 @@
    let a=1;
    if(a!==0){
        console.log('Вірно');
-   }else if (a==0) {
+   }else if (a===0) {
        console.log('Невірно');
    }
    // a=0
       a=0;
    if(a!==0){
        console.log('Вірно');
-   }else if (a==0) {
+   }else if (a===0) {
        console.log('Невірно');
    }
    //  a=-3;
    a=-3;
    if(a!==0){
        console.log('Вірно');
-   }else if (a==0) {
+   }else if (a===-3) {
        console.log('Невірно');
    }
    //4)   Скласти розклад на тиждень за домопоги switch.
@@ -103,7 +103,7 @@
    }
    //5)Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4
    let year_number = + prompt('Введіть рік');
-   if( (year_number % 4)==0){
+   if( (year_number % 4)===0){
        console.log('Рік високосний')
    }else{
        console.log('Рік не високосний')
@@ -111,7 +111,7 @@
    //6))Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“
    //Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
    let name_company=prompt('Яка «офіційна» назва JavaScript');
-   if(name_company=='ECMAScript'){
+   if(name_company==='ECMAScript'){
        console.log('Правильно!');
    }else{
        console.log('Не знаєте? ECMAScript!');
