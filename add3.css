@@ -1,0 +1,12 @@
+
+.l{
+    height: 200px;
+    width: 200px;
+}
+.post-card{
+    display: flex;
+    justify-content: space-between;
+    width: 200000px;
+    height: 1050px;
+    border: 2px black solid;
+}
