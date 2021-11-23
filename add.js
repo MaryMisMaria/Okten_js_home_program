@@ -21,7 +21,24 @@ function change() {
     }
     console.log(res);
 }
+/// або другий спосіб
+function f(obj1, obj2) {
+    if (!obj1 && !obj2){
+        return 'bad values';
+    }
+    if (!obj1){
+        return obj2;
 
+    } else if (!obj2){
+        return obj1;
+
+    } else {
+        return obj1+obj2;
+    }
+}
+let a, b;
+
+console.log(f(a, b));
 console.log(change(3,9));
 console.log(change('a', 'c', 7));
 // - створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
