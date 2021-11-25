@@ -42,6 +42,20 @@ let list2 = (a,list) => {
 };
 list2('hello',6);
 //8- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-let arrayList=(arr)=>{}
-//9-- створити функцію яка приймає масив обєктів з наступними полями id,name,age , та виводить їх в документ.
+document.write('_____________8____________');
+let arrayList=(arr)=>{
+    document.write('<ul>');
+    for(let list of arr){
+        document.write(`<li>${list}</li>`);
+    }
+    document.write('</ul>');
+};
+arrayList([1,3,5,8,true,'f',false,'ar']);
+//9- створити функцію яка приймає масив обєктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного обєкту окремий блок.
+document.write('_____________9__________');
+let users=(arr)=>{
+    for(let item of arr){document.write(`<div>  ${item.id} -  ${item.name}  </div>`);}
+};
+users([{id:1},{name:'mary'}]);
+users([{id:2},{name:'maria'}]);
