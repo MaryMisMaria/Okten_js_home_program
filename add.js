@@ -74,7 +74,7 @@ function zero_sort(array) {
 
 zero_sort([1,0,6,0,3]);
 console.log('______________4.1__________');
-zero_sort([1,0,6,0,3]);
-console.log('______________4.2__________');
-zero_sort([1,0,6,0,3]);
+zero_sort([0,1,2,3,4]);
+
+
 
