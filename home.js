@@ -71,7 +71,7 @@ for (let item of menuCome) {
     //     btn.classList.toggle('hide-body')
     // });
     btn.onclick=function (){
-        btn.classList.add('hide-body');
+        btn.classList.toggle('hide-body');
     };
     document.body.appendChild(divMain);
     divMain.appendChild(titleDiv);
