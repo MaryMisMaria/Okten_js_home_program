@@ -15,14 +15,14 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divID.innerText = `id - ${item.id} `;
             let divName = document.createElement('div');
             divName.innerText = `Name - ${item.name} `;
-            let divUsername = document.createElement('div');
-            divUsername.innerText = `UserName - ${item.username} `;
-            let divEmail = document.createElement('div');
-            divEmail.innerText = `Email - ${item.email} `;
-            let divAddress = document.createElement('div');
-
+            let btn = document.createElement('button');
+            btn.innerText = 'Details about users';
+            btn.onclick = function () {
+                btn.disabled;
+                window.location = './user_details.html';
+            }
             document.body.appendChild(mainDiv);
-            mainDiv.append(divID, divName, divUsername, divEmail, divAddress);
+            mainDiv.append(divID, divName, btn);
         }
 
     });
