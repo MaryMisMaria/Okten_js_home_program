@@ -3,6 +3,8 @@
 // 2 Вывести id,name всех user в index.html. Отдельный блок для каждого user.
 // 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html,
 // которая имеет детальную информацию про объект на который кликнули index.html
+const favoritesKey='favorites';
+localStorage.setItem(favoritesKey,JSON.stringify([]));
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => {
         return response.json();
@@ -18,6 +20,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let btn = document.createElement('button');
             btn.innerText = 'Details about users';
             btn.onclick = function () {
+                const favorites=JSON.parse(localStorage.getItem(favoritesKey));
+                favorites.push(item);
+                localStorage.setItem(favoritesKey,JSON.stringify(favorites));
                 btn.disabled;
                 window.location = './user_details.html';
             }
