@@ -12,6 +12,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(users => {
         for (let item of users) {
             let mainDiv = document.createElement('div');
+            let contentDiv=document.createElement('div');
+            contentDiv.classList.add('content');
             mainDiv.classList.add('main');
             let divID = document.createElement('div');
             divID.innerText = `id - ${item.id} `;
@@ -26,7 +28,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
                 btn.disabled;
                 window.location = './user_details.html';
             }
-            document.body.appendChild(mainDiv);
+            document.body.appendChild(contentDiv);
+
+            contentDiv.appendChild(mainDiv);
             mainDiv.append(divID, divName, btn);
         }
 
